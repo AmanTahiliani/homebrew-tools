@@ -5,43 +5,29 @@
 class Todo < Formula
   desc "A simple CLI tool to manage your todo list."
   homepage "https://github.com/AmanTahiliani/todo"
-  version "0.3.2-alpha"
+  version "0.3.3-alpha"
   license "MIT"
-  
-  stable do
-    url "https://github.com/AmanTahiliani/todo/releases/download/v#{version}/todo_Darwin_x86_64.tar.gz"
-    sha256 "767e7db19b15536be1fb7eb3f77ac477b85cb89f0afd459a7c589f253dc05ccd"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/AmanTahiliani/todo/releases/download/v0.3.2-alpha/todo_Darwin_x86_64.tar.gz"
-      sha256 "767e7db19b15536be1fb7eb3f77ac477b85cb89f0afd459a7c589f253dc05ccd"
+    url "https://github.com/AmanTahiliani/todo/releases/download/v0.3.3-alpha/todo_Darwin_all.tar.gz"
+    sha256 "d016e0e3f2c2ffeeb83117c60c3404466f626b8b6a40984c810c1d0aa4ec8c7b"
 
-      def install
-        bin.install "todo"
-      end
-    end
-    if Hardware::CPU.arm?
-      url "https://github.com/AmanTahiliani/todo/releases/download/v0.3.2-alpha/todo_Darwin_arm64.tar.gz"
-      sha256 "ee8fe3d9b371e45405b9715583f27eb47d88849766d1e94e82e8c5053d2d3e87"
-
-      def install
-        bin.install "todo"
-      end
+    def install
+      bin.install "todo"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/AmanTahiliani/todo/releases/download/v0.3.2-alpha/todo_Linux_x86_64.tar.gz"
-      sha256 "45c818accc61ec9c7a79fd0122127be759aa8452e35d8b17b3b3ff83ee0ef1fd"
+      url "https://github.com/AmanTahiliani/todo/releases/download/v0.3.3-alpha/todo_Linux_x86_64.tar.gz"
+      sha256 "6ff26f5a3cc23ed76631adc4928503c63885d9655fee07d05e0c42dd68cd17a9"
       def install
         bin.install "todo"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/AmanTahiliani/todo/releases/download/v0.3.2-alpha/todo_Linux_arm64.tar.gz"
-      sha256 "55e85bec08e911e6b0b473e8b1f248ffae08dd135934a5df798876fdbd1a4348"
+      url "https://github.com/AmanTahiliani/todo/releases/download/v0.3.3-alpha/todo_Linux_arm64.tar.gz"
+      sha256 "43ea5673764a41d2a6cf3bd537056d46fac3d3f8203d3cd46102e2347b78843b"
       def install
         bin.install "todo"
       end
