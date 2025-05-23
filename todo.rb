@@ -7,6 +7,10 @@ class Todo < Formula
   homepage "https://github.com/AmanTahiliani/todo"
   version "0.3.2-alpha"
   license "MIT"
+  
+  stable do
+    url "https://github.com/AmanTahiliani/todo/releases/download/v#{version}/todo_Darwin_x86_64.tar.gz"
+    sha256 "767e7db19b15536be1fb7eb3f77ac477b85cb89f0afd459a7c589f253dc05ccd"
 
   on_macos do
     if Hardware::CPU.intel?
